@@ -62,22 +62,6 @@ data = [
         , "api": ""
         , "auth": ""
         , "custom": ""
-    },
-    {
-	"name": "Open Source Access Control Web Interface"
-	, "features": ""
-        , "license": "Creative Commons Attribution 3.0 license"
-        , "development": "1 primary developer"
-        , "stack": "Ruby (1.9.3, not the latest release, but required for Gemfiles), Rails 3, ImageMagick, arp-scan, PostgreSQL, Amazon S3 (or other storage for picture attachments), libq-dev, libsqlite3-dev"
-        , "documentation": "Requires some prior knowledge of postgresql and Ruby on Rails"
-        , "installation": "Succeeded with significant difficulty"
-        , "usability": "Straightforward site design"
-        , "security": "Ran Brakeman, which returned 34 security warnings, 14 with high confidence"
-        , "international": ""
-        , "dataformat": "postgresql or sqlite3"
-        , "api": ""
-        , "auth": ""
-        , "custom": ""
     }
 
 ]
