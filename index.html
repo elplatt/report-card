@@ -3,6 +3,28 @@
     <head>
         <title>Hackerspace App Report Card</title>
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <script id="tpl-entity-view" type="text/template">
+            <div class="row col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h2><%= name %></h2>
+                        <p><strong>Features:</strong> <%= features %></p>
+                        <p><strong>License:</strong> <%= license %></p>
+                        <p><strong>Development:</strong> <%= development %></p>
+                        <p><strong>Stack:</strong> <%= stack %></p>
+                        <p><strong>Documentation:</strong> <%= documentation %></p>
+                        <p><strong>Installation:</strong> <%= installation %></p>
+                        <p><strong>Usability:</strong> <%= usability %></p>
+                        <p><strong>Security:</strong> <%= security %></p>
+                        <p><strong>International:</strong> <%= international %></p>
+                        <p><strong>Data Format:</strong> <%= dataformat %></p>
+                        <p><strong>API:</strong> <%= api %></p>
+                        <p><strong>Auth:</strong> <%= auth %></p>
+                        <p><strong>Customization:</strong> <%= custom %></p>
+                    </div>
+                </div>
+            </div>
+        </script>
     </head>
     <body>
         <div class="container">
@@ -10,21 +32,23 @@
             <p>
                 Created at the 2014 Aaron Swartz Hackathon, at MIT.
             </p>
-            <div class="row col-md-10 col-md-offset-1">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <h2>Hackerspace OS</h2>
-                        <h3>Features:</h3>
-                        <p>Foo, bar, baz.</p>
-                    </div>
-                </div>
-            </div>
+            <p>
+                <!-- alphabetical by last name -->
+                Contributors: Ed Platt, Yu Wang
+            </p>
         </div>
         <script type="text/javascript" src="js/data.js"></script>
         <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap-min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/underscore-min.js"></script>
-        <script type="text/javascript" src="js/backbone.min.js"></script>
-        <script type="text/javascript" src="js/main.js"/></script>
+        <script type="text/javascript" src="js/backbone-min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function () {
+            var entities = new EntityCollection(data);
+            var entityListView = new EntityListView({collection: entities});
+            $('.container').append(entityListView.el);
+        });
+        </script>
     </body>
 </html>
