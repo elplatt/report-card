@@ -1,19 +1,19 @@
 data = [
     {
         "name": "Hackerspace OS"
-        , "features": "Events, projects."
+        , "features": "Member info, events calendar, projects, accounts(?)."
         , "license": "Open source, unknown."
         , "development": "Metalab fork is active, but focused on their local instance."
-        , "stack": "Python, django."
+        , "stack": "Python, django 1.0.x."
         , "documentation": "None."
         , "installation": "Undocumented dependencies. Runtime errors on Ubuntu 14.04 LTS."
-        , "usability": ""
-        , "security": ""
+        , "usability": "Difficult"
+        , "security": "Password auth. DB access through django. Users can be assigned to groups to give them permissions."
         , "international": "Built-in through django. Strings in German."
-        , "dataformat": ""
-        , "api": ""
-        , "auth": ""
-        , "custom": ""
+        , "dataformat": "SQL."
+        , "api": "None."
+        , "auth": "Custom."
+        , "custom": "Only by editing core code."
     },
     {
         "name": "GNU Cash"
